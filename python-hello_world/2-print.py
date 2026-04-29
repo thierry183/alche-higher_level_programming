@@ -1,2 +1,2 @@
-#!/bin/bash
-print ('python3 -c "$PYCODE"')
+#!/usr/bin/env python3
+print("\"Programming is like building a multilingual puzzle")
