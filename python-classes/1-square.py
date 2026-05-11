@@ -3,6 +3,7 @@
 
 
 class Square:
+
     """Taking """
 
     def __init__(self, size):
