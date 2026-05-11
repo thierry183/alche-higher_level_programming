@@ -1,62 +1,26 @@
 #!/usr/bin/python3
-"""
-math_utils.py
-Author: MUHIRE
-Date: May 2026
+"""Module that defines a Square class."""
 
-This module provides simple mathematical operations:
-- addTwo: increases a number by 2
-- multiply: multiplies two numbers
-- magic_calculation: performs a custom calculation
-- Calculator: a class that bundles these operations
-"""
 
-class Calculator:
-    """
-    A simple calculator class for basic math operations.
+class Square:
+    """Class that defines a square."""
 
-    Methods:
-        addTwo(x): Increase a number by 2.
-        multiply(a, b): Multiply two numbers.
-        magic_calculation(a, b): Perform a custom calculation.
-    """
+    def __init__(self, size=0):
+        """Initialize a new Square instance.
 
-    def addTwo(self, x):
+        Args:
+            size (int): The size of the square. Defaults to 0.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
         """
-        Increase a number by 2.
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
-        Parameters:
-            x (int or float): The input number.
-
-        Returns:
-            int or float: The result of x + 2.
-        """
-        return x + 2
-
-    def multiply(self, a, b):
-        """
-        Multiply two numbers.
-
-        Parameters:
-            a (int or float): The first number.
-            b (int or float): The second number.
-
-        Returns:
-            int or float: The product of a and b.
-        """
-        return a * b
-
-    def magic_calculation(self, a, b):
-        """
-        Perform a 'magic' operation:
-        Add a and b, then multiply the result by 3.
-
-        Parameters:
-            a (int or float): The first number.
-            b (int or float): The second number.
-
-        Returns:
-            int or float: The result of (a + b) * 3.
-        """
-        return (a + b) * 3
-
+    def area(self):
+        """Calculate and return the area of the square."""
+        return self.__size ** 2
