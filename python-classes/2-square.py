@@ -1,13 +1,53 @@
 #!/usr/bin/python3
-"""Write a class Square that defines a square by: (based on 0-square.py)"""
+"""
+math_utils.py
+Author: MUHIRE
+Date: May 2026
+
+This module provides simple mathematical operations:
+- addTwo: increases a number by 2
+- multiply: multiplies two numbers
+- magic_calculation: performs a custom calculation
+"""
+
+def addTwo(x):
+    """
+    Increase a number by 2.
+
+    Parameters:
+        x (int or float): The input number.
+
+    Returns:
+        int or float: The result of x + 2.
+    """
+    return x + 2
 
 
-class Square:
-    """Taking """
+def multiply(a, b):
+    """
+    Multiply two numbers.
 
-    def __init__(self, size=0):
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
+    Parameters:
+        a (int or float): The first number.
+        b (int or float): The second number.
+
+    Returns:
+        int or float: The product of a and b.
+    """
+    return a * b
+
+
+def magic_calculation(a, b):
+    """
+    Perform a 'magic' operation:
+    Add a and b, then multiply the result by 3.
+
+    Parameters:
+        a (int or float): The first number.
+        b (int or float): The second number.
+
+    Returns:
+        int or float: The result of (a + b) * 3.
+    """
+    return (a + b) * 3
+
