@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-def safe_print_integer(value):
-    try:
-        print("{:d}".format(value))
-        return True
-    except (ValueError, TypeError):
-        return False
+"""Write a class Square that defines a square by: (based on 0-square.py)"""
+
+
+class Square:
+    """Taking """
+
+    def __init__(self, size):
+        self.__size = size
